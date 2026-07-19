@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 2 · Capturing valid consent - learn PDPA + DNC with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-pdpa-dnc-with-phoebe</a> / Practitioner session 2 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn PDPA + DNC with Phoebe · Practitioner track · Session 2 of 8</div>
+    <h1>Capturing valid <span class="accent">consent</span></h1>
+    <p class="sub">Consent is the lawful basis you will lean on most - and the one most easily done wrong. This session makes it practical: what "clear and unambiguous" actually requires, why a pre-ticked box is not consent, the three kinds of deemed consent you can rely on without asking again, and how withdrawal really works. Marina Retail rebuilds its sign-up form so the consent it collects would survive a PDPC query.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 easy</span>
+      <span class="chip audience">Marketers · DPOs · sales ops</span>
+      <span class="chip audience">Running case: Marina Retail</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-22 · Valid consent</span>
+      <span class="a3" style="flex:4">22-40 · Deemed + withdrawal</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Consent you can actually prove</h2>
+    </div>
+    <p class="lede">In b1 the checker kept assuming a clean answer to one question: do you have consent? This session earns that answer. Real consent is not "we think they agreed" - it is a <strong>positive action</strong> the person took, on a <strong>clear notice</strong>, that you <strong>recorded</strong>. Get those three right and you have a lawful basis that overrides the register and survives a query. Get them wrong and you have a marketing list built on sand.</p>
+    <div class="callout tip">
+      <strong>Read this first</strong>
+      Educational, not legal advice. This session is a practical teaching model of the PDPA consent rules - always verify against the current PDPC Advisory Guidelines on Key Concepts and get proper advice before relying on a consent design for a real campaign.
+    </div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you build today</strong>
+      A working definition of valid consent you can hold a form up against, the three deemed-consent routes that let you use data without asking again, a withdrawal process that ceases use cleanly, and a rewritten Marina Retail consent line that would pass review.
+    </div>
+  </section>
+
+  <section class="section" id="valid">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers what valid consent requires</span>
+      <h2>What valid consent looks like <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Consent is not a checkbox - it is a moment where a person, having been told plainly what they are agreeing to, does something to say yes. The good flow and the bad flow below look similar on a screen and are worlds apart in law.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Good consent flow: clear notice then positive action then record. Bad consent flow: pre-ticked box or bundled terms or inaction, which is not valid consent">
+        <style>
+          .b2cT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b2cI { font: 700 13.5px Inter, sans-serif; fill: #1E293B; }
+          .b2cW { font: 400 12px Inter, sans-serif; fill: #CCFBF1; }
+          .b2cS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .b2cX { font: 600 12.5px Inter, sans-serif; fill: #64748B; }
+          .b2cN { font: 600 14px Inter, sans-serif; fill: #431407; }
+          .b2cArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b2cAh); }
+        </style>
+        <defs>
+          <marker id="b2cAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/>
+          </marker>
+        </defs>
+        <text class="b2cI" x="30" y="42">Valid consent</text>
+        <rect x="30" y="58" width="200" height="70" rx="12" fill="#0F766E"/>
+        <text class="b2cT" x="48" y="88">Clear notice</text>
+        <text class="b2cW" x="48" y="108">what, why, who</text>
+        <rect x="300" y="58" width="200" height="70" rx="12" fill="#0D9488"/>
+        <text class="b2cT" x="318" y="88">Positive action</text>
+        <text class="b2cW" x="318" y="108">person opts in</text>
+        <rect x="570" y="58" width="200" height="70" rx="12" fill="#134E4A"/>
+        <text class="b2cT" x="588" y="88">Record it</text>
+        <text class="b2cW" x="588" y="108">what + when + how</text>
+        <line class="b2cArr" x1="232" y1="93" x2="296" y2="93"/>
+        <line class="b2cArr" x1="502" y1="93" x2="566" y2="93"/>
+        <text class="b2cI" x="30" y="196">Not consent</text>
+        <rect x="30" y="212" width="230" height="66" rx="12" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <text class="b2cS" x="48" y="240">Pre-ticked box</text>
+        <text class="b2cX" x="48" y="262">inaction is not a yes</text>
+        <rect x="325" y="212" width="230" height="66" rx="12" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <text class="b2cS" x="343" y="240">Bundled consent</text>
+        <text class="b2cX" x="343" y="262">forced beyond what is needed</text>
+        <rect x="620" y="212" width="230" height="66" rx="12" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <text class="b2cS" x="638" y="240">Misleading means</text>
+        <text class="b2cX" x="638" y="262">tricked into agreeing</text>
+        <rect x="30" y="316" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b2cN" x="54" y="328">If the person did not take a positive action on a clear notice, you do not have consent - you have a checkbox.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the good consent flow, and the three ways it fails</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Positive action, on a clear notice<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Under s.14 of the PDPA, consent must be <strong>clear and unambiguous</strong>. In practice that means the person took a <strong>positive action</strong> to agree - ticked an empty box, typed their number into a field labelled for marketing, replied "YES" to a keyword. What is <em>not</em> consent:</p>
+        <ul>
+          <li><strong>A pre-ticked box.</strong> If the default is "yes" and the person did nothing, they did not consent. Inaction or failure to opt out is not a clear-and-unambiguous yes.</li>
+          <li><strong>Silence or "continuing to use the site".</strong> Passive states are not positive actions. The person has to do the agreeing.</li>
+          <li><strong>A notice buried where no reasonable person would read it.</strong> Clear means clear - the purpose has to be visible at the moment of the action.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Two limits: reasonableness and honesty<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Even a positive action is not enough if you asked for too much or asked dishonestly. Section 14 draws two hard lines:</p>
+        <ul>
+          <li><strong>You cannot require consent beyond what is reasonable</strong> to provide the product or service. Making marketing consent a condition of buying a kettle is over-reach - the sale does not need it, so you cannot force it as a bundle.</li>
+          <li><strong>You cannot obtain consent by false or misleading means.</strong> If the person agreed because you misrepresented what they were agreeing to, that consent is not valid - it is deemed not given.</li>
+          <li><strong>Separate the asks.</strong> Consent to fulfil the order and consent to market are different purposes. Bundle them and the marketing consent is tainted.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="deemed">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers deemed consent + withdrawal</span>
+      <h2>Deemed consent + withdrawal <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Sometimes you do not need to ask, because the person's own conduct or the transaction supplies the consent - that is deemed consent. And whenever consent exists, the person can take it back. Both paths are below.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three deemed-consent types: by conduct, by contractual necessity, by notification. Plus the withdrawal path: notice, inform of consequences, cease use">
+        <style>
+          .b2dT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b2dI { font: 700 13.5px Inter, sans-serif; fill: #1E293B; }
+          .b2dW { font: 400 12px Inter, sans-serif; fill: #CCFBF1; }
+          .b2dS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .b2dX { font: 600 12.5px Inter, sans-serif; fill: #64748B; }
+          .b2dN { font: 600 14px Inter, sans-serif; fill: #431407; }
+          .b2dArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b2dAh); }
+        </style>
+        <defs>
+          <marker id="b2dAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/>
+          </marker>
+        </defs>
+        <text class="b2dI" x="30" y="42">Deemed consent</text>
+        <rect x="30" y="58" width="255" height="72" rx="12" fill="#0F766E"/>
+        <text class="b2dT" x="48" y="86">By conduct</text>
+        <text class="b2dW" x="48" y="107">volunteers data for</text>
+        <text class="b2dW" x="48" y="123">an obvious purpose</text>
+        <rect x="312" y="58" width="255" height="72" rx="12" fill="#0D9488"/>
+        <text class="b2dT" x="330" y="86">Contractual necessity</text>
+        <text class="b2dW" x="330" y="107">needed to conclude or</text>
+        <text class="b2dW" x="330" y="123">perform a transaction</text>
+        <rect x="594" y="58" width="255" height="72" rx="12" fill="#134E4A"/>
+        <text class="b2dT" x="612" y="86">By notification</text>
+        <text class="b2dW" x="612" y="107">no adverse effect +</text>
+        <text class="b2dW" x="612" y="123">reasonable opt-out window</text>
+        <text class="b2dI" x="30" y="200">Withdrawal - any time</text>
+        <rect x="30" y="216" width="180" height="60" rx="12" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <text class="b2dS" x="48" y="242">Reasonable notice</text>
+        <text class="b2dX" x="48" y="262">person opts out</text>
+        <rect x="280" y="216" width="200" height="60" rx="12" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <text class="b2dS" x="298" y="242">Inform consequences</text>
+        <text class="b2dX" x="298" y="262">do not prohibit it</text>
+        <rect x="550" y="216" width="200" height="60" rx="12" fill="#0D9488"/>
+        <text class="b2dT" x="568" y="242">Cease use</text>
+        <text class="b2dW" x="568" y="262">~10 business days</text>
+        <line class="b2dArr" x1="212" y1="246" x2="276" y2="246"/>
+        <line class="b2dArr" x1="482" y1="246" x2="546" y2="246"/>
+        <rect x="30" y="304" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b2dN" x="54" y="316">Deemed consent covers the purpose it was given for - it is not a licence to market for anything.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - three deemed-consent routes and the withdrawal path</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The three deemed-consent routes<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Deemed consent means the law treats consent as given without an explicit tick, in three defined situations:</p>
+        <ul>
+          <li><strong>By conduct (s.15(1)).</strong> The person voluntarily provides their data for a purpose that is obvious in context - handing over a phone number to book a delivery slot deems consent to use it for that delivery. It does not deem consent to market to them.</li>
+          <li><strong>By contractual necessity (s.15(3)).</strong> Where sharing the data is reasonably necessary to conclude or perform a transaction the person is party to, consent is deemed - and it can extend downstream to a party you need to involve to deliver.</li>
+          <li><strong>By notification (s.15A).</strong> You may deem consent for a new purpose if you assess it will have no adverse effect on the person, tell them about it, and give a reasonable period to opt out before you proceed. This one requires a documented assessment - it is not a free pass.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Withdrawal, and the records to keep<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Consent is never permanent. Under s.16 an individual may <strong>withdraw</strong> at any time, on reasonable notice:</p>
+        <ul>
+          <li><strong>You must not prohibit withdrawal</strong> - no "you agreed forever" clauses. You may inform the person of the <strong>likely consequences</strong> (for example, they will stop getting offers), but you cannot block the withdrawal itself.</li>
+          <li><strong>Cease use on withdrawal.</strong> Once withdrawn, you stop using the data for that purpose. The PDPC rule of thumb is to give effect within about <strong>10 business days</strong>.</li>
+          <li><strong>Keep records of both.</strong> Record the consent you obtained (what, when, how) and every withdrawal. If the PDPC asks how you were entitled to market to someone, the record is your answer.</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Marina Retail fixes its sign-up form.</strong> Marina's old checkout had one pre-ticked box: "Keep me updated and agree to terms." It bundled the sale with marketing and defaulted to yes - failing on both positive action and reasonableness. The rebuild splits it into two empty boxes: one to complete the order (deemed by contractual necessity anyway), one clearly labelled "Yes, send me Marina offers by SMS" that the customer must tick themselves. Same page, now provable consent.</p>
+        </div>
+        <div class="callout tip">
+          <strong>Practical tip</strong>
+          Timestamp and store the exact consent wording shown at the moment of the tick, not just a "consented = true" flag. When a dispute arises two years later, "here is precisely what they agreed to, and when" is far stronger than a boolean.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Build-along · take it further</span>
+      <h2>Rewrite a bad consent line <span class="tag demo">★ 10 min</span></h2>
+    </div>
+    <p class="lede">The fastest way to internalise valid consent is to fix a broken one. Here is Marina's old line - repair it, then design the record you would keep.</p>
+    <table class="clean">
+      <thead><tr><th>Marina's bad line (fix this)</th><th>Why it fails</th></tr></thead>
+      <tbody>
+        <tr><td>"[x] Keep me updated and agree to terms" (pre-ticked, bundled)</td><td>Default yes = no positive action; sale and marketing bundled; not clear what "updated" means.</td></tr>
+      </tbody>
+    </table>
+    <div class="steps">
+      <div class="step"><p><strong>Unbundle.</strong> Separate the order-completion consent from the marketing consent. The order can rely on contractual necessity; marketing needs its own ask.</p></div>
+      <div class="step"><p><strong>Make it a positive action.</strong> Start unticked. Write a line the customer actively ticks - name the channel and who is sending. For example: "Yes, send me Marina Retail promotions by SMS. Unsubscribe any time."</p></div>
+      <div class="step"><p><strong>Design the record.</strong> Sketch the fields you would store on each tick: customer ID, exact consent text shown, channel, timestamp, source page, and a matching withdrawal field. This is what you show the PDPC.</p></div>
+      <div class="step"><p><strong>Reflect.</strong> In one line: where in your real sign-up flow does a person actually take a positive action to be marketed to - and can you prove it today?</p></div>
+    </div>
+    <div class="callout win">
+      <strong>★ Marina Retail after b2</strong>
+      Marina's consent is now real and provable - an unticked, unbundled, channel-specific opt-in with a timestamped record and a clean withdrawal path. In b3 we put it to work: running one full marketing campaign end to end, from scoping the message to keeping the evidence.
+    </div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session b3 <span class="tag exercise">◐ 40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Screenshot your organisation's main sign-up or checkout consent. Mark every place it fails positive action, reasonableness, or bundling.</li>
+      <li>List which of your marketing uses rely on express consent versus a deemed-consent route - and for each deemed one, name which of s.15(1), s.15(3), or s.15A applies.</li>
+      <li>Find out how a withdrawal request reaches your team today and how long it takes to cease use. Is it under 10 business days?</li>
+      <li>Read: the PDPC Advisory Guidelines on Key Concepts - the sections on Consent, Deemed Consent, and Withdrawal of Consent.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the PDPC's own guidance on consent. This page covers ~80% of its working content on obtaining and recording consent - deeper obligations land in later sessions.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PDPC · Advisory Guidelines on Key Concepts - Consent</span><span class="note">Part 1 · clear + unambiguous · positive action · reasonableness · no misleading means</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PDPC · Advisory Guidelines on Key Concepts - Deemed Consent + Withdrawal</span><span class="note">Part 2 · s.15(1) conduct · s.15(3) contractual · s.15A notification · s.16 withdrawal</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PDPA Part 4 (s.14, s.15, s.15A, s.16)</span><span class="note">Part 1-2 · the statutory basis for valid, deemed, and withdrawn consent</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Your checkout has a pre-ticked "keep me updated" box. A customer completes the order without touching it. You have...</p>
+      <button class="qopt" type="button">A · Valid consent - they did not untick it</button>
+      <button class="qopt" type="button">B · No valid consent - inaction on a pre-ticked box is not a clear, positive action</button>
+      <button class="qopt" type="button">C · Deemed consent by conduct</button>
+      <p class="qwhy">Valid consent (s.14) needs a positive action on a clear notice. A pre-ticked box and failure to opt out is not clear-and-unambiguous consent - the person has to do the agreeing.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Which is a genuine deemed-consent route under the PDPA?</p>
+      <button class="qopt" type="button">A · The person did not reply to your opt-out email within 48 hours</button>
+      <button class="qopt" type="button">B · You bought a list described as "consented"</button>
+      <button class="qopt" type="button">C · Consent by notification (s.15A) - assess no adverse effect, tell them, give a reasonable opt-out period</button>
+      <p class="qwhy">Deemed consent by notification (s.15A) requires a documented no-adverse-effect assessment plus notice and a reasonable opt-out window. A bought list or a short non-reply is not deemed consent.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A customer withdraws marketing consent. You must...</p>
+      <button class="qopt" type="button">A · Cease using the data for marketing (rule of thumb ~10 business days) and keep a record of the withdrawal</button>
+      <button class="qopt" type="button">B · Keep sending until the contract ends</button>
+      <button class="qopt" type="button">C · Charge a small fee to process the withdrawal</button>
+      <p class="qwhy">Under s.16 you cannot prohibit withdrawal; you may inform of consequences, then must cease use - the PDPC rule of thumb is about 10 business days - and record the withdrawal.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Valid consent (s.14)</b><span>Clear and unambiguous - a positive action on a clear notice. Not a pre-ticked box, not silence.</span></div>
+      <div class="cheat-item"><b>Reasonableness limit</b><span>Cannot require consent beyond what is reasonable to provide the product or service.</span></div>
+      <div class="cheat-item"><b>No misleading means</b><span>Consent obtained by false or misleading means is not valid consent.</span></div>
+      <div class="cheat-item"><b>Deemed by conduct (s.15(1))</b><span>Volunteers data for an obvious purpose - covers that purpose only, not marketing.</span></div>
+      <div class="cheat-item"><b>Deemed by contract (s.15(3))</b><span>Reasonably necessary to conclude or perform a transaction; can extend downstream.</span></div>
+      <div class="cheat-item"><b>Deemed by notification (s.15A)</b><span>Assess no adverse effect + notify + reasonable opt-out period. Document it.</span></div>
+      <div class="cheat-item"><b>Withdrawal (s.16)</b><span>Any time, reasonable notice. Inform of consequences, do not prohibit, then cease use (~10 business days).</span></div>
+      <div class="cheat-item"><b>Keep records</b><span>Store exact consent wording + when + how, and every withdrawal. That record is your proof.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 2 of 8 · learn-pdpa-dnc-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b3-compliant-campaign.html">Next: A compliant campaign end to end →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

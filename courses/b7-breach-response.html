@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 7 · Data breach response - learn PDPA + DNC with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-pdpa-dnc-with-phoebe</a> / Practitioner session 7 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn PDPA + DNC with Phoebe · Practitioner track · Session 7 of 8</div>
+    <h1>Data breach <span class="accent">response</span></h1>
+    <p class="sub">A breach is the one obligation that arrives with its own stopwatch running. The PDPA's Data Breach Notification regime tells you exactly when a breach must be reported, how fast, and to whom - and the clock starts before you feel ready. This session turns that pressure into a rehearsed sequence: assess within 30 days, notify the PDPC within 3, tell affected people, then fix the gap that let it happen. Marina Retail discovers a leak of 3,000 records and we run the clock together.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Hardest</span>
+      <span class="chip audience">DPOs · IT · incident leads</span>
+      <span class="chip audience">Against the clock</span>
+      <span class="chip time">Session 7 of 8</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-22 · Assess and notify</span>
+      <span class="a3" style="flex:4">22-40 · Run the clock</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The obligation with a stopwatch</h2>
+    </div>
+    <p class="lede">Most PDPA duties are things you build calmly in advance. Breach response is the one you execute under pressure - which is exactly why you rehearse it in advance. The whole regime comes down to a sequence you can memorise: <strong>contain it, assess whether it is notifiable within 30 days, notify the PDPC within 3 days if it is, tell affected individuals, then learn from it</strong>. Know the sequence cold and a bad day stays a manageable one.</p>
+    <div class="callout tip">
+      <strong>Read this first</strong>
+      Educational, not legal advice. This session teaches the PDPA Data Breach Notification obligation as a working playbook - in a real breach, verify against the current PDPC guide and get proper legal and technical advice immediately.
+    </div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you build today</strong>
+      A clear model of what makes a breach notifiable (significant harm OR 500+ individuals), the two hard timelines (assess in 30 days, notify the PDPC in 3), what a notification must contain, the data-intermediary duty, and a rehearsed breach clock you can run from day one.
+    </div>
+  </section>
+
+  <section class="section" id="assess">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the notifiable test + the timelines</span>
+      <h2>Assess, then notify <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">The regime is a timeline. From the moment you have credible grounds a breach occurred, you assess whether it is notifiable; if it is, the PDPC clock and then the individuals clock start. Get the sequence and the numbers right and the rest follows.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Breach timeline: credible grounds, assess within 30 days, if notifiable notify the PDPC within 3 calendar days, then notify affected individuals">
+        <style>
+          .b7bT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b7bI { font: 700 13.5px Inter, sans-serif; fill: #1E293B; }
+          .b7bW { font: 400 12px Inter, sans-serif; fill: #CCFBF1; }
+          .b7bS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .b7bX { font: 600 12.5px Inter, sans-serif; fill: #64748B; }
+          .b7bN { font: 600 14px Inter, sans-serif; fill: #431407; }
+          .b7bArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b7bAh); }
+        </style>
+        <defs>
+          <marker id="b7bAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/>
+          </marker>
+        </defs>
+        <line x1="40" y1="230" x2="840" y2="230" stroke="#CBD5E1" stroke-width="3"/>
+        <rect x="30" y="120" width="176" height="80" rx="12" fill="#134E4A"/>
+        <text class="b7bT" x="48" y="150">Credible</text>
+        <text class="b7bT" x="48" y="170">grounds</text>
+        <text class="b7bW" x="48" y="190">a breach occurred</text>
+        <rect x="242" y="112" width="188" height="96" rx="12" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <text class="b7bI" x="260" y="140">Assess</text>
+        <text class="b7bS" x="260" y="162">within 30 days:</text>
+        <text class="b7bS" x="260" y="180">is it notifiable?</text>
+        <text class="b7bS" x="260" y="198">harm OR 500+</text>
+        <rect x="466" y="112" width="188" height="96" rx="12" fill="#0F766E"/>
+        <text class="b7bT" x="484" y="140">Notify PDPC</text>
+        <text class="b7bW" x="484" y="164">within 3 calendar</text>
+        <text class="b7bW" x="484" y="182">days of deciding</text>
+        <text class="b7bW" x="484" y="200">it is notifiable</text>
+        <rect x="690" y="120" width="166" height="80" rx="12" fill="#0D9488"/>
+        <text class="b7bT" x="708" y="150">Notify people</text>
+        <text class="b7bW" x="708" y="174">affected individuals,</text>
+        <text class="b7bW" x="708" y="192">same time or after</text>
+        <circle cx="118" cy="230" r="7" fill="#134E4A"/>
+        <circle cx="336" cy="230" r="7" fill="#0F766E"/>
+        <circle cx="560" cy="230" r="7" fill="#0D9488"/>
+        <line class="b7bArr" x1="208" y1="160" x2="238" y2="160"/>
+        <line class="b7bArr" x1="432" y1="160" x2="462" y2="160"/>
+        <line class="b7bArr" x1="656" y1="160" x2="686" y2="160"/>
+        <rect x="30" y="256" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b7bN" x="54" y="268">Two clocks: 30 days to assess, then 3 calendar days to notify the PDPC once you decide it is notifiable.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the breach clock, start to notification</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>When is a breach notifiable?<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Not every breach is reportable. A breach is <strong>notifiable</strong> if it meets either limb of a two-part test:</p>
+        <ul>
+          <li><strong>Significant harm.</strong> It is likely to result in significant harm to the affected individuals. Certain categories of personal data are prescribed as automatically meeting this bar in the PDP (Notification of Data Breaches) Regulations 2021.</li>
+          <li><strong>Significant scale.</strong> It affects <strong>500 or more individuals</strong> - regardless of how sensitive the data is.</li>
+        </ul>
+        <p>Either limb is enough. "Significant harm" includes physical, psychological, emotional, economic, financial, and reputational harm - so a small leak of the wrong kind of data can be notifiable even if it touches only a handful of people.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The two timelines<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The numbers are the part you must not fumble under pressure. There are two clocks:</p>
+        <ul>
+          <li><strong>Assess within 30 days.</strong> Once you have credible grounds that a breach occurred, take reasonable and expeditious steps to assess whether it is notifiable - within 30 calendar days.</li>
+          <li><strong>Notify the PDPC within 3 calendar days.</strong> If you decide it is notifiable, notify the PDPC as soon as practicable, and in any case <strong>no later than 3 calendar days</strong> after you make that determination.</li>
+          <li><strong>Then notify affected individuals</strong> as soon as practicable - at the same time as, or after, notifying the PDPC (never carelessly before, so you do not cause panic without facts).</li>
+        </ul>
+        <table class="clean">
+          <thead><tr><th>Milestone</th><th>Deadline</th></tr></thead>
+          <tbody>
+            <tr><td>Assess whether notifiable</td><td>Within 30 calendar days of credible grounds</td></tr>
+            <tr><td>Notify the PDPC</td><td>No later than 3 calendar days after deciding it is notifiable</td></tr>
+            <tr><td>Notify affected individuals</td><td>As soon as practicable, at the same time as or after the PDPC</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>If you are a data intermediary<span class="mini">3 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A data intermediary - an organisation that processes personal data on behalf of and for the purposes of another - has a narrower but firm duty. If it detects a breach in the data it processes, it must <strong>notify the organisation it processes for, without undue delay</strong>. The intermediary does not assess or notify the PDPC itself; that responsibility sits with the organisation whose data it is.</p>
+        <div class="steps">
+          <div class="step"><p>Intermediary detects a possible breach in the data it handles for a client.</p></div>
+          <div class="step"><p>It notifies that client organisation without undue delay - the client's assessment clock effectively depends on this.</p></div>
+          <div class="step"><p>The organisation assesses, and if notifiable, runs the PDPC and individual notifications.</p></div>
+        </div>
+        <p>If you use vendors, make sure your contracts require them to tell you fast. Their delay becomes your missed deadline.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="respond">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers containment, good notifications, and learning</span>
+      <h2>Contain, notify well, learn <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">The clock is only half the job. Around it sits a response arc that starts before the assessment and ends after the notification: contain the damage, assess, notify well, remediate, and feed what you learned back into your controls so the same gap cannot reopen.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Breach response arc: contain, assess, notify the PDPC and individuals, remediate, then feed back into controls">
+        <style>
+          .b7cT { font: 700 13.5px Inter, sans-serif; fill: #FFFFFF; }
+          .b7cI { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .b7cW { font: 400 11.5px Inter, sans-serif; fill: #CCFBF1; }
+          .b7cS { font: 400 11.5px Inter, sans-serif; fill: #334155; }
+          .b7cX { font: 600 12px Inter, sans-serif; fill: #64748B; }
+          .b7cN { font: 600 14px Inter, sans-serif; fill: #431407; }
+          .b7cArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b7cAh); }
+        </style>
+        <defs>
+          <marker id="b7cAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/>
+          </marker>
+        </defs>
+        <rect x="24" y="96" width="150" height="72" rx="12" fill="#134E4A"/>
+        <text class="b7cT" x="42" y="126">Contain</text>
+        <text class="b7cW" x="42" y="146">stop the</text>
+        <text class="b7cW" x="42" y="162">bleeding</text>
+        <rect x="200" y="96" width="150" height="72" rx="12" fill="#0F766E"/>
+        <text class="b7cT" x="218" y="126">Assess</text>
+        <text class="b7cW" x="218" y="146">notifiable?</text>
+        <text class="b7cW" x="218" y="162">30 days</text>
+        <rect x="376" y="96" width="150" height="72" rx="12" fill="#0D9488"/>
+        <text class="b7cT" x="394" y="126">Notify</text>
+        <text class="b7cW" x="394" y="146">PDPC + people</text>
+        <text class="b7cW" x="394" y="162">3-day clock</text>
+        <rect x="552" y="96" width="150" height="72" rx="12" fill="#0F766E"/>
+        <text class="b7cT" x="570" y="126">Remediate</text>
+        <text class="b7cW" x="570" y="146">fix the</text>
+        <text class="b7cW" x="570" y="162">root cause</text>
+        <rect x="712" y="188" width="144" height="72" rx="12" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <text class="b7cI" x="730" y="216">Feed back</text>
+        <text class="b7cS" x="730" y="238">into your</text>
+        <text class="b7cS" x="730" y="254">controls</text>
+        <line class="b7cArr" x1="176" y1="132" x2="198" y2="132"/>
+        <line class="b7cArr" x1="352" y1="132" x2="374" y2="132"/>
+        <line class="b7cArr" x1="528" y1="132" x2="550" y2="132"/>
+        <line class="b7cArr" x1="702" y1="150" x2="770" y2="184"/>
+        <path class="b7cArr" d="M784,188 C784,60 300,44 99,90" />
+        <text class="b7cX" x="360" y="40">learning closes the loop</text>
+        <rect x="24" y="266" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b7cN" x="48" y="278">A breach is a stress test of your Protection Obligation - the real win is closing the gap that let it happen.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the response arc loops back into your controls</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What a notification must contain<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A notification is not a one-line "we had a breach". Both the PDPC and the individuals need enough to understand and act. Aim to include:</p>
+        <ul>
+          <li><strong>What happened</strong> - the nature and extent of the breach, and when it was discovered.</li>
+          <li><strong>What data</strong> was involved and roughly how many individuals are affected.</li>
+          <li><strong>The likely harm</strong> and what you have done or will do to contain and remediate it.</li>
+          <li><strong>What individuals can do</strong> to protect themselves (change a password, watch for scams) and how to contact you with questions.</li>
+        </ul>
+        <p>Notify the PDPC through its breach notification form. If you do not yet have every detail within the deadline, notify anyway with what you have - you can supplement later.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>When to consult the PDPC first<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Usually you notify individuals at the same time as or shortly after the PDPC. But in some cases you should <strong>consult the PDPC before notifying individuals</strong> - for example, where notifying could tip off a perpetrator, interfere with an investigation, or where the breach is likely to attract widespread public attention and a coordinated message matters.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Marina has a leak of 3,000 records.</strong> A misconfigured export exposed name, email, and order history for 3,000 customers. Scale alone (500+) makes it notifiable - Marina does not even need to argue about harm. The team contains it (revokes the export link), assesses well inside 30 days, notifies the PDPC within 3 days of confirming it is notifiable, then emails the 3,000 customers with plain steps: what leaked, that no passwords or cards were involved, and how to reach the DPO. One rehearsed sequence, no scramble.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Turn the incident into a fix<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The notification is not the finish line. A breach is direct evidence that a control failed - so the last step is to use it. Trace the incident to the Protection Obligation gap that allowed it (a misconfiguration, an over-broad access right, a missing review) and close that gap, then check whether the same weakness exists elsewhere.</p>
+        <div class="callout tip">
+          <strong>Rehearse before you need it</strong>
+          The organisations that handle breaches well are not the ones that never have them - they are the ones who wrote the playbook, named the incident lead, and ran a tabletop drill before the real thing. Do the drill on a quiet Tuesday, not during the actual leak.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Build-along · take it further</span>
+      <h2>Run Marina's breach clock <span class="tag demo">★ 10 min</span></h2>
+    </div>
+    <p class="lede">A leak is discovered on a Monday. Walk the clock forward and write down what must happen and by when - this is the drill you want to have done before it is real.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Monday - credible grounds.</strong> The export link is found exposed. Contain it first: revoke access, preserve logs. Note the date - your 30-day assessment clock starts now.</p></div>
+      <div class="step"><p><strong>Assess.</strong> How many individuals, what data, what harm? With 3,000 records the scale limb settles it - notifiable. Write the determination date; the 3-day PDPC clock starts from there.</p></div>
+      <div class="step"><p><strong>Notify the PDPC.</strong> Within 3 calendar days of the determination, file the notification with what you know. Then plan the individual notifications - same time or just after.</p></div>
+      <div class="step"><p><strong>Remediate and learn.</strong> Fix the misconfiguration, check for the same weakness elsewhere, and feed the lesson back into your Protection controls. Reflect - if this happened tomorrow, who is your incident lead, and do they know it?</p></div>
+    </div>
+    <div class="callout win">
+      <strong>★ Marina Retail after b7</strong>
+      Marina now has a breach playbook, not a panic: contain, assess in 30 days, notify the PDPC in 3, tell affected customers plainly, and close the gap that caused it. The team ran the drill before they needed it. Next, in b8 - the finale - we assemble everything from b1 to b7 into a durable compliance system Marina can actually keep running.
+    </div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session b8 <span class="tag exercise">◐ 40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Sketch your organisation's breach clock: who declares a breach, who assesses, who notifies, and where the 30-day and 3-day deadlines are tracked.</li>
+      <li>Name your incident lead and their backup. Does the wider team know who to call at 9pm on a Friday?</li>
+      <li>Check one vendor contract: does it require the vendor to notify you of a breach without undue delay?</li>
+      <li>Read: PDPC Guide on Managing and Notifying Data Breaches, plus the prescribed categories in the PDP (Notification of Data Breaches) Regulations 2021.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the PDPC's own breach guidance. This page covers the working core of the notification regime - the prescribed data categories and edge cases live in the regulations linked below.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PDPC · Guide on Managing and Notifying Data Breaches</span><span class="note">Part 1-2 · notifiable test · 30-day and 3-day clocks · what to include · consulting first</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PDPA Part 6A (Notification of Data Breaches)</span><span class="note">Part 1 · the assessment and notification obligations · the intermediary duty</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PDP (Notification of Data Breaches) Regulations 2021</span><span class="note">Part 1 · the 500-individual threshold + prescribed significant-harm categories</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A data breach is notifiable to the PDPC if it...</p>
+      <button class="qopt" type="button">A · Involves any personal data at all</button>
+      <button class="qopt" type="button">B · Affects at least 50 individuals</button>
+      <button class="qopt" type="button">C · Is likely to cause significant harm OR affects 500 or more individuals</button>
+      <p class="qwhy">Either limb triggers notification: significant harm to affected individuals, OR significant scale of 500 or more individuals. You do not need both.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Once you determine a breach is notifiable, you must notify the PDPC...</p>
+      <button class="qopt" type="button">A · As soon as practicable, and no later than 3 calendar days after the determination</button>
+      <button class="qopt" type="button">B · Within 30 days of the determination</button>
+      <button class="qopt" type="button">C · Only after you have notified every affected individual</button>
+      <p class="qwhy">You have up to 30 days to assess whether it is notifiable; once you decide it is, the PDPC must be notified no later than 3 calendar days after that determination.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · A data intermediary detects a breach in data it processes for a client. It must...</p>
+      <button class="qopt" type="button">A · Notify the PDPC itself within 3 days</button>
+      <button class="qopt" type="button">B · Notify the organisation it processes for, without undue delay</button>
+      <button class="qopt" type="button">C · Do nothing - the duty is entirely the client's</button>
+      <p class="qwhy">The intermediary's duty is to alert the organisation it processes for, without undue delay. That organisation then assesses and, if notifiable, handles the PDPC and individual notifications.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Notifiable test</b><span>Likely significant harm OR 500+ individuals affected. Either limb is enough.</span></div>
+      <div class="cheat-item"><b>Assess in 30 days</b><span>From credible grounds, assess whether notifiable within 30 calendar days.</span></div>
+      <div class="cheat-item"><b>Notify PDPC in 3 days</b><span>If notifiable, notify the PDPC no later than 3 calendar days after deciding.</span></div>
+      <div class="cheat-item"><b>Then notify individuals</b><span>As soon as practicable, at the same time as or after the PDPC.</span></div>
+      <div class="cheat-item"><b>Significant harm is broad</b><span>Physical, psychological, emotional, economic, financial, reputational.</span></div>
+      <div class="cheat-item"><b>Intermediary duty</b><span>Must tell the organisation it processes for, without undue delay.</span></div>
+      <div class="cheat-item"><b>Consult first when</b><span>Notifying could tip off a perpetrator or the breach draws widespread attention.</span></div>
+      <div class="cheat-item"><b>Close the gap</b><span>Trace the breach to the Protection Obligation weakness and fix it - that is the real win.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 7 of 8 · learn-pdpa-dnc-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b8-compliance-system.html">Next: Building the compliance system →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

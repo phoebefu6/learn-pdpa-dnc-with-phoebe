@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 4 · Message-ID + calling rules - learn PDPA + DNC with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-pdpa-dnc-with-phoebe</a> / Practitioner session 4 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn PDPA + DNC with Phoebe · Practitioner track · Session 4 of 8</div>
+    <h1>Message-ID and <span class="accent">calling rules</span></h1>
+    <p class="sub">Passing the register check is only half the job. Every marketing message you send also has to say who it is from and how to reach them - and if it is a voice call or a fax, the number cannot be hidden. This session works through the two identification duties that apply to every specified message, no matter the channel, and audits a real Marina Retail SMS against them.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Medium</span>
+      <span class="chip audience">Marketers · DPOs · sales ops</span>
+      <span class="chip audience">Applies to every send</span>
+      <span class="chip time">~45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-22 · Sender ID (s.44)</span>
+      <span class="a3" style="flex:4">22-40 · Calling line (s.45)</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Who sent this, and how do I reach them?</h2>
+    </div>
+    <p class="lede">The register check keeps you off the wrong numbers. The identification rules make sure the people you <em>do</em> message can see who is behind the send and reply, opt out, or complain. Two short duties carry the weight: <strong>s.44</strong> (identify the sender and give valid contact info, on every specified message) and <strong>s.45</strong> (do not hide the calling line on voice or fax). Get both into your send template once and you stop thinking about them.</p>
+    <div class="callout tip">
+      <strong>Read this first</strong>
+      Educational, not legal advice. This session is a practical walk-through of the PDPA Part 9 identification duties - always verify against the current PDPC Advisory Guidelines on the DNC Provisions and get proper advice for real campaigns.
+    </div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you build today</strong>
+      A send template that satisfies both identification duties by default: a clear, accurate sender identity and a contact route that will still work in a month, plus an unconcealed calling line on every voice call and fax - so a compliant send stays compliant even when the register check passed.
+    </div>
+  </section>
+
+  <section class="section" id="senderid">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the sender-identification duty</span>
+      <h2>Identify the sender (s.44) <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Section 44 says every specified message must let the recipient see who sent it and how to contact them. It is simple to state and easy to forget - the "from" and the reply route are exactly what gets stripped when a template is trimmed for length. Here is the anatomy of a message that satisfies it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anatomy of a compliant marketing message: a clearly identified sender at the top and valid contact information at the bottom, both required by section 44">
+        <style>
+          .b4mT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b4mI { font: 700 13.5px Inter, sans-serif; fill: #1E293B; }
+          .b4mW { font: 400 12px Inter, sans-serif; fill: #CCFBF1; }
+          .b4mS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .b4mX { font: 600 12.5px Inter, sans-serif; fill: #64748B; }
+          .b4mN { font: 600 14px Inter, sans-serif; fill: #431407; }
+          .b4mArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b4mAh); }
+        </style>
+        <defs>
+          <marker id="b4mAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/>
+          </marker>
+        </defs>
+        <rect x="300" y="40" width="280" height="220" rx="14" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <rect x="300" y="40" width="280" height="48" rx="14" fill="#134E4A"/>
+        <text class="b4mT" x="320" y="70">From: Marina Retail Pte Ltd</text>
+        <text class="b4mS" x="320" y="126">Weekend sale - 20% off</text>
+        <text class="b4mS" x="320" y="148">storewide this Saturday.</text>
+        <text class="b4mS" x="320" y="170">Show this at the counter.</text>
+        <line x1="320" y1="196" x2="560" y2="196" stroke="#CBD5E1" stroke-width="1.5"/>
+        <text class="b4mI" x="320" y="222">Reply STOP to opt out</text>
+        <text class="b4mS" x="320" y="244">care@marinaretail.sg</text>
+        <rect x="30" y="52" width="220" height="60" rx="12" fill="#0F766E"/>
+        <text class="b4mT" x="48" y="78">Sender identity</text>
+        <text class="b4mW" x="48" y="98">clear + accurate: who sent it</text>
+        <rect x="30" y="212" width="220" height="76" rx="12" fill="#0D9488"/>
+        <text class="b4mT" x="48" y="238">Contact info</text>
+        <text class="b4mW" x="48" y="258">how to readily reach them,</text>
+        <text class="b4mW" x="48" y="276">valid at least ~30 days</text>
+        <rect x="630" y="120" width="220" height="80" rx="12" fill="#134E4A"/>
+        <text class="b4mT" x="648" y="148">Both are required</text>
+        <text class="b4mW" x="648" y="170">on EVERY specified</text>
+        <text class="b4mW" x="648" y="188">message, any channel</text>
+        <line class="b4mArr" x1="252" y1="80" x2="296" y2="70"/>
+        <line class="b4mArr" x1="252" y1="248" x2="296" y2="222"/>
+        <line class="b4mArr" x1="582" y1="150" x2="626" y2="155"/>
+        <rect x="30" y="308" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b4mN" x="54" y="320">No visible sender or no working reply route = a s.44 breach, even if the register check passed.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the two parts s.44 requires on every message</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What s.44 actually requires<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every specified message must <strong>clearly and accurately identify the sender</strong> - the person who sent it or authorised the send - and tell the recipient <strong>how they can readily contact</strong> that sender. Both parts, together, on every marketing message.</p>
+        <ul>
+          <li><strong>Clear and accurate.</strong> A vague "from a partner" or a brand the recipient will not recognise does not satisfy it. The identity has to be one the recipient can actually tie to who is marketing to them.</li>
+          <li><strong>Readily contactable.</strong> A reply route the recipient can use without jumping through hoops - a phone number, an email, an address. It has to actually reach the sender.</li>
+          <li><strong>It applies to every channel.</strong> SMS, email, voice, fax - if it is a specified message, s.44 is in force. Small screens and short scripts are not an exemption.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The contact info must stay valid (~30 days) + the URL rule<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The contact information you give has to be <strong>reasonably likely to remain valid for at least 30 days</strong> after the message is sent. A number you are about to retire, or a mailbox nobody reads, does not count - the recipient must be able to reach you after the fact.</p>
+        <ul>
+          <li><strong>The ~30-day validity is about contactability</strong>, not about the register. It says "the reply route you gave still works a month later" - nothing about re-checking numbers.</li>
+          <li><strong>A website address counts only if the sender is identifiable from it.</strong> A URL satisfies s.44 when the recipient can tell who sent the message from the URL itself or the landing page it opens. A bare, unbranded short link does not.</li>
+          <li><strong>Do not conflate the two 30-day/21-day rules.</strong> The s.44 "~30 days" is the sender-contact validity. The 21-day rule from b1 is the register-check validity. Different sections, different clocks - see the callout below.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>Two clocks, do not mix them</strong>
+          The s.44 <strong>~30-day</strong> window is how long your contact info must stay valid. The <strong>21-day</strong> window from b1 is how long a "not listed" register check stays valid before you must re-check. They are separate rules under separate provisions - a common exam-and-audit trap.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="callingline">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the calling-line duty + channels</span>
+      <h2>Do not hide the number (s.45) <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">On top of identifying yourself, if the specified message is a <strong>voice call or a fax</strong>, you must not conceal or withhold the calling line identity - the number the recipient sees. A blocked or spoofed caller ID on a marketing call is its own breach, separate from s.44. Here is what each channel needs.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section 45 requires voice calls and faxes to show the calling line identity, while section 44 sender identification applies across all channels">
+        <style>
+          .b4cT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b4cI { font: 700 13.5px Inter, sans-serif; fill: #1E293B; }
+          .b4cW { font: 400 12px Inter, sans-serif; fill: #CCFBF1; }
+          .b4cS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .b4cX { font: 600 12.5px Inter, sans-serif; fill: #64748B; }
+          .b4cN { font: 600 14px Inter, sans-serif; fill: #431407; }
+          .b4cArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b4cAh); }
+        </style>
+        <defs>
+          <marker id="b4cAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/>
+          </marker>
+        </defs>
+        <rect x="30" y="40" width="200" height="72" rx="12" fill="#0F766E"/>
+        <text class="b4cT" x="48" y="70">Voice call</text>
+        <text class="b4cW" x="48" y="92">s.44 ID + s.45 show number</text>
+        <rect x="30" y="128" width="200" height="72" rx="12" fill="#0D9488"/>
+        <text class="b4cT" x="48" y="158">SMS / text</text>
+        <text class="b4cW" x="48" y="180">s.44 ID (no s.45)</text>
+        <rect x="30" y="216" width="200" height="72" rx="12" fill="#134E4A"/>
+        <text class="b4cT" x="48" y="246">Fax</text>
+        <text class="b4cW" x="48" y="268">s.44 ID + s.45 show number</text>
+        <rect x="310" y="90" width="230" height="80" rx="12" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <text class="b4cI" x="328" y="120">s.44 sender ID</text>
+        <text class="b4cS" x="328" y="142">every channel -</text>
+        <text class="b4cS" x="328" y="158">no exceptions</text>
+        <rect x="310" y="196" width="230" height="80" rx="12" fill="#F0FDFA" stroke="#5EEAD4"/>
+        <text class="b4cI" x="328" y="226">s.45 calling line</text>
+        <text class="b4cS" x="328" y="248">voice + fax only -</text>
+        <text class="b4cS" x="328" y="264">do not conceal</text>
+        <rect x="620" y="128" width="230" height="76" rx="12" fill="#134E4A"/>
+        <text class="b4cT" x="638" y="156">Blocked caller ID</text>
+        <text class="b4cW" x="638" y="178">on a marketing call</text>
+        <text class="b4cW" x="638" y="194">= s.45 breach</text>
+        <line class="b4cArr" x1="232" y1="76" x2="306" y2="120"/>
+        <line class="b4cArr" x1="232" y1="164" x2="306" y2="130"/>
+        <line class="b4cArr" x1="232" y1="252" x2="306" y2="236"/>
+        <line class="b4cArr" x1="542" y1="236" x2="616" y2="180"/>
+        <rect x="30" y="298" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b4cN" x="54" y="310">s.44 rides every channel. s.45 adds one thing for voice and fax: the recipient must see your number.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - what each channel needs</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>s.45 and the per-channel checklist<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Section 45 targets one thing: <strong>on a voice call or a fax carrying a specified message, you must not conceal or withhold the calling line identity</strong>. The recipient has to be able to see the number the message came from.</p>
+        <table class="clean">
+          <thead>
+            <tr><th>Channel</th><th>s.44 sender ID</th><th>s.45 calling line</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Voice call</td><td>Required</td><td>Required - show the number</td></tr>
+            <tr><td>SMS / text</td><td>Required</td><td>Not applicable</td></tr>
+            <tr><td>Fax</td><td>Required</td><td>Required - show the number</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li><strong>s.44 applies to all three channels.</strong> Sender identity and contact info are never optional.</li>
+          <li><strong>s.45 adds the calling-line duty for voice and fax.</strong> Withholding or spoofing the number is the breach, even when everything else is in order.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Marina's SMS - and the clock trap again<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Marina Retail's headerless SMS.</strong> Marina's team sent a promo SMS from a plain long-code number with no brand name in the body and no reply route - just "20% off this weekend, tap here" over an unbranded short link. The register check had passed, so they assumed they were fine. They were not: with no identifiable sender and no working contact, the message failed <strong>s.44</strong>. The fix was one line in the template - a sender name plus "Reply STOP or care@marinaretail.sg" - not a new process.</p>
+        </div>
+        <div class="callout tip">
+          <strong>Keep the two clocks apart</strong>
+          When you fix a s.44 gap, resist the urge to say "valid for 21 days". The contact info you add must stay valid ~30 days (s.44). The 21-day clock belongs to the register check (b1). Writing "21" on a s.44 control is the mistake auditors catch most.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where these duties break in real send stacks<span class="mini">4 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The identification duties rarely fail because someone decided to hide. They fail because a template was trimmed, a channel was swapped, or a tool defaulted to something unbranded. The recurring failure modes:</p>
+        <ul>
+          <li><strong>The trimmed SMS.</strong> A body cut to fit one segment drops the sender name or the "Reply STOP" line. Both are s.44 content - a length budget is not a defence.</li>
+          <li><strong>The shared short link.</strong> A campaign reuses a generic bit.ly-style link that resolves to a page with no clear sender. The URL then does not satisfy s.44, because the sender is not identifiable from it.</li>
+          <li><strong>The dialler default.</strong> An outbound calling platform set to withhold or randomise caller ID trips s.45 on every marketing call, silently, until someone checks a handset.</li>
+          <li><strong>The retired mailbox.</strong> A reply-to address or number that is decommissioned inside the month breaks the ~30-day contact validity even though it was correct when the message went out.</li>
+        </ul>
+        <p>The fix for all four is the same shape: set the sender identity, reply route, and caller ID at the platform or template level, and put a periodic check on the list so a decommissioned route is caught before the next send.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Build-along · audit a real message</span>
+      <h2>Audit a Marina message <span class="tag demo">★ 10 min</span></h2>
+    </div>
+    <p class="lede">The whole session collapses into three questions you can run on any message in under a minute. Pull a real Marina Retail send - or one of your own - and walk it through.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Is the sender identifiable?</strong> Read only the message, as the recipient would. Can you tell who is marketing to you, clearly and accurately? If a URL is the only clue, is the sender identifiable from the link or its landing page?</p></div>
+      <div class="step"><p><strong>Are they contactable?</strong> Is there a reply route - phone, email, address - that actually reaches the sender, and is it reasonably likely to still work in ~30 days? A retired number fails.</p></div>
+      <div class="step"><p><strong>Voice or fax? Is the number shown?</strong> If the send is a call or a fax, confirm the calling line identity is not blocked, withheld, or spoofed. SMS and email skip this one.</p></div>
+      <div class="step"><p><strong>Fix it in the template.</strong> Whatever failed, patch it once at the template level so every future send inherits the fix. Note the change and who owns the send template.</p></div>
+    </div>
+    <div class="callout win">
+      <strong>★ Marina Retail after b4</strong>
+      Marina's send template now carries a clear sender name and a working reply route by default, and their outbound calls show the number instead of a blocked ID. A campaign that passes the register check now also survives the identification duties - and the team no longer confuses the 30-day contact clock with the 21-day register clock. Next, in b5, we find the messages that fall outside the DNC rules entirely.
+    </div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session b5 <span class="tag exercise">◐ 40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Pull your three most-used marketing templates and audit each against the s.44 two questions - sender identifiable, contact valid ~30 days.</li>
+      <li>List every channel you market on and confirm which ones are voice or fax; for those, verify the calling line is shown, not blocked.</li>
+      <li>Find who owns each send template and where the sender ID + reply route are set - so a fix sticks instead of being retyped per campaign.</li>
+      <li>Read: the PDPC Advisory Guidelines on the Do Not Call Provisions, Part IV (message identification and calling line).</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the PDPC's own DNC guidance. This page covers the identification duties - the sender-ID and calling-line rules that apply to every specified message.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">PDPC · Advisory Guidelines on the DNC Provisions (Part IV)</span><span class="note">Part 1-2 · s.44 sender identity + contact validity · s.45 calling line · per-channel duties</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PDPA Part 9 (s.44, s.45)</span><span class="note">Part 1-2 · the statutory identification and calling-line provisions</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Under s.44, the contact information in a marketing message must be reasonably likely to stay valid for at least...</p>
+      <button class="qopt" type="button">A · 21 days</button>
+      <button class="qopt" type="button">B · 7 days</button>
+      <button class="qopt" type="button">C · 30 days</button>
+      <p class="qwhy">s.44 requires the sender contact info to be reasonably likely to remain valid for at least 30 days. Do not confuse this with the 21-day register-check validity from b1 - separate rule, separate clock.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · A marketing SMS passes the register check but shows no sender name and no reply route. It is...</p>
+      <button class="qopt" type="button">A · Compliant - the register check is what matters</button>
+      <button class="qopt" type="button">B · Not compliant - s.44 requires clear sender identity and contact info on every specified message</button>
+      <button class="qopt" type="button">C · Compliant if it is under 160 characters</button>
+      <p class="qwhy">s.44 applies to every channel. Passing the register check is necessary but not sufficient - a message with no identifiable sender and no contact route fails on s.44.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which duty applies to a voice marketing call but NOT to a marketing SMS?</p>
+      <button class="qopt" type="button">A · s.45 - not concealing the calling line identity (the number shown)</button>
+      <button class="qopt" type="button">B · s.44 - identifying the sender</button>
+      <button class="qopt" type="button">C · The 21-day register check</button>
+      <p class="qwhy">s.45 - the calling-line duty - applies to voice and fax only. s.44 sender identification applies to every channel, and the register check applies to whichever register covers the channel.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>s.44 - identify the sender</b><span>Every specified message must clearly and accurately show who sent or authorised it.</span></div>
+      <div class="cheat-item"><b>s.44 - contact info</b><span>Give a route the recipient can readily use to contact the sender - phone, email, or address.</span></div>
+      <div class="cheat-item"><b>~30-day validity</b><span>That contact info must be reasonably likely to stay valid at least 30 days after the send.</span></div>
+      <div class="cheat-item"><b>URL rule</b><span>A website address counts only if the sender is identifiable from the URL or its landing page.</span></div>
+      <div class="cheat-item"><b>s.45 - calling line</b><span>Voice calls and faxes must not conceal or withhold the calling line identity (the number shown).</span></div>
+      <div class="cheat-item"><b>Every channel</b><span>s.44 rides SMS, email, voice, and fax. s.45 adds the number-shown duty for voice and fax only.</span></div>
+      <div class="cheat-item"><b>Two clocks, do not mix</b><span>s.44 ~30 days = contact validity. 21 days = register-check validity (b1). Separate rules.</span></div>
+      <div class="cheat-item"><b>Fix at the template</b><span>Set sender ID and reply route once in the send template so every campaign inherits it.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 4 of 8 · learn-pdpa-dnc-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b5-exemptions-practice.html">Next: Exemptions in practice →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

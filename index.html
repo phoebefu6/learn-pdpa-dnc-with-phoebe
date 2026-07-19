@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn PDPA + DNC with phoebe - a two-track course on Singapore data protection</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+  .lawnote { margin-top: 1rem; font-size: .8rem; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); border-radius: 10px; padding: .55rem .8rem; max-width: 46rem; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card { border: 1px solid var(--hairline); border-top: 4px solid var(--diff, var(--indigo)); border-radius: var(--radius); padding: 1.2rem 1.3rem 1.1rem; display: flex; flex-direction: column; gap: .5rem; text-decoration: none; color: var(--ink); background: #fff; transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease; position: relative; }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(15,118,110,.14); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .rp-card { border: 1px solid var(--hairline); border-left: 4px solid var(--indigo); border-radius: var(--radius); padding: 1rem 1.2rem; background: linear-gradient(180deg,#fff,var(--indigo-50)); margin-top: 1.2rem; }
+  .rp-card h4 { font-size: 1rem; font-weight: 800; margin-bottom: .3rem; }
+  .rp-card p { font-size: .86rem; color: var(--muted); line-height: 1.6; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#EFFCFA); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn PDPA + DNC with Phoebe</div>
+    <h1>Two tracks from "what does the PDPA want" to a marketing campaign you can defend</h1>
+    <p class="sub">Singapore's Personal Data Protection Act sets ten obligations for handling personal data - and a Do Not Call layer on top that governs every marketing call, text, and fax. A leader track teaches what the law requires and what it costs to get wrong, no jargon. A practitioner track turns it operational: check the registry, capture real consent, run a campaign that survives an audit, and respond to a breach. The running case is Marina Retail, a Singapore SME. Taught from the PDPC's own guidelines.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="14">14</b><span>sessions</span></div>
+      <div class="stat"><b data-count="1">1</b><span>live DNC checker</span></div>
+      <div class="stat"><b data-count="10">10</b><span>PDPA obligations</span></div>
+    </div>
+    <div class="lawnote">⚖️ Educational, not legal advice. The PDPA is administered by the PDPC and changes - verify against the current PDPC Advisory Guidelines and get proper advice before acting.</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for C-level, managers &amp; marketers who sign off · 6 x 45 min · no jargon</span></h2>
+      <p class="plede">What the law actually requires, where the risk sits, and the decisions only you can make - each session ends with questions to ask your DPO and marketing team.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-why-pdpa-dnc.html" style="--diff:#34D399">
+        <span class="cicon">⚖️</span><span class="cnum">Leader 1 · easy</span>
+        <h3>Why PDPA + DNC matter</h3>
+        <p>The law, the regulator, and the real cost of getting it wrong - data leaks and unwanted marketing, in dollars and trust.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-pdpa-obligations.html" style="--diff:#34D399">
+        <span class="cicon">📋</span><span class="cnum">Leader 2 · easy</span>
+        <h3>The ten obligations</h3>
+        <p>Consent, purpose, notification, protection, retention, breach notification and the rest - each as the question it puts to your team.</p>
+        <span class="meta"><span class="pill light">Plain English</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-dnc-layer.html" style="--diff:#FBBF24">
+        <span class="cicon">📵</span><span class="cnum">Leader 3 · medium</span>
+        <h3>The DNC layer</h3>
+        <p>Three registers, what counts as a "specified message", and the check-before-you-send duty that trips up marketers.</p>
+        <span class="meta"><span class="pill light">Do Not Call</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-consent-exemptions.html" style="--diff:#FBBF24">
+        <span class="cicon">✅</span><span class="cnum">Leader 4 · medium</span>
+        <h3>Consent vs DNC + exemptions</h3>
+        <p>How consent lets you skip the register, and the exemptions - transactional, B2B, ongoing relationship - that decide what is even in scope.</p>
+        <span class="meta"><span class="pill light">The interaction</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-breach-enforcement.html" style="--diff:#FB923C">
+        <span class="cicon">⚠️</span><span class="cnum">Leader 5 · deciding</span>
+        <h3>Breach &amp; enforcement</h3>
+        <p>The breach-notification clock, the penalty caps, and real PDPC decisions - what actually happened and what it cost.</p>
+        <span class="meta"><span class="pill light">Real cases</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-governance.html" style="--diff:#FB923C">
+        <span class="cicon">🏛️</span><span class="cnum">Leader 6 · deciding</span>
+        <h3>Governance &amp; accountability</h3>
+        <p>The DPO, the accountability obligation, and the compliance programme that turns one-off effort into a habit.</p>
+        <span class="meta"><span class="pill light">Build the program</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The practitioner track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for marketers, DPOs &amp; ops · 8 x 45 min · Marina Retail case</span></h2>
+      <p class="plede">The operational half: how to actually comply, day to day, on real campaigns. Every session moves Marina Retail one step closer to an operation that survives an audit.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-dnc-check.html" style="--diff:#34D399">
+        <span class="cicon">📵</span><span class="cnum">Practitioner 1 · easy</span>
+        <h3>The DNC check before you send</h3>
+        <p>The three registers, the 21-day rule, and a live checker that rules any scenario compliant or not - and tells you why.</p>
+        <span class="meta"><span class="pill amber">▶ Practitioners start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-consent.html" style="--diff:#34D399">
+        <span class="cicon">✍️</span><span class="cnum">Practitioner 2 · easy</span>
+        <h3>Capturing valid consent</h3>
+        <p>Clear-and-unambiguous consent, deemed consent, positive action vs pre-ticked boxes, records, and honouring withdrawal.</p>
+        <span class="meta"><span class="pill light">Marina gets consent</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-compliant-campaign.html" style="--diff:#FBBF24">
+        <span class="cicon">📣</span><span class="cnum">Practitioner 3 · medium</span>
+        <h3>A compliant campaign end to end</h3>
+        <p>Scope the message, pick consent or a register check, send, and keep the records that prove you did it right.</p>
+        <span class="meta"><span class="pill light">Marina runs a campaign</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-message-id-rules.html" style="--diff:#FBBF24">
+        <span class="cicon">🪪</span><span class="cnum">Practitioner 4 · medium</span>
+        <h3>Message-ID + calling rules</h3>
+        <p>Sender identity and contact info (s.44), never concealing the calling number (s.45), across voice, SMS, and fax.</p>
+        <span class="meta"><span class="pill light">Identify yourself</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-exemptions-practice.html" style="--diff:#FB923C">
+        <span class="cicon">🧩</span><span class="cnum">Practitioner 5 · hands-on</span>
+        <h3>Exemptions in practice</h3>
+        <p>Transactional, market research, B2B, and the ongoing-relationship exemption - which messages fall outside DNC entirely.</p>
+        <span class="meta"><span class="pill light">What is in scope</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-access-correction.html" style="--diff:#FB923C">
+        <span class="cicon">🔎</span><span class="cnum">Practitioner 6 · hands-on</span>
+        <h3>Access &amp; correction requests</h3>
+        <p>What to hand over, the 30-day rule, permitted refusals, and passing corrections to third parties you shared with.</p>
+        <span class="meta"><span class="pill light">Handle a request</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-breach-response.html" style="--diff:#F87171">
+        <span class="cicon">🚨</span><span class="cnum">Practitioner 7 · hardest</span>
+        <h3>Data breach response</h3>
+        <p>Assess in 30 days, notify the PDPC in 3, notify individuals - the notifiable thresholds and the clock that starts ticking.</p>
+        <span class="meta"><span class="pill light">When it goes wrong</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-compliance-system.html" style="--diff:#F87171">
+        <span class="cicon">🗂️</span><span class="cnum">Practitioner 8 · hardest</span>
+        <h3>Building the compliance system</h3>
+        <p>DPO, policies, a data inventory, staff training, a breach plan, and audits - the accountability artifacts that make it stick.</p>
+        <span class="meta"><span class="pill light">Marina graduates</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="paths">
+      <h2>The running case + the live checker 📵</h2>
+      <div class="rp-card">
+        <h4>Marina Retail, and a DNC checker you can poke</h4>
+        <p>The practitioner track follows Marina Retail, a Singapore SME, from "we just blast our customer list" to a marketing operation that survives an audit. Session b1 gives you a live DNC compliance checker: pick a message purpose, channel, consent state, and register check, and it rules the scenario compliant or not - and cites the exact PDPA provision. It encodes the real Part 9 decision logic (educational, not legal advice).</p>
+      </div>
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one course. Leaders get the law and the risk; practitioners get the day-to-day moves that keep you compliant.</p>
+      <div class="path"><b>🤝 Leader (the law + the risk)</b>
+        <a class="pstep" href="courses/a1-why-pdpa-dnc.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-pdpa-obligations.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-dnc-layer.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-consent-exemptions.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-breach-enforcement.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-governance.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ Practitioner (comply day to day)</b>
+        <a class="pstep" href="courses/b1-dnc-check.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-consent.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-compliant-campaign.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-message-id-rules.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-exemptions-practice.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-access-correction.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-breach-response.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-compliance-system.html">b8</a>
+      </div>
+      <div class="path"><b>🌱 Marketer in a hurry (the essentials)</b>
+        <a class="pstep" href="courses/a3-dnc-layer.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-dnc-check.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-consent.html">b2</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (lead AND run it)</b>
+        <a class="pstep" href="courses/a1-why-pdpa-dnc.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-dnc-check.html">b1-b8</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-pdpa-dnc-with-phoebe · by Phoebe Fu · taught from the PDPC's official guidelines · educational, not legal advice</span>
+    <span>📚 Part of <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> - the shelf of every course</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn\nPDPA + DNC",
+  centerColor: "#134E4A",
+  sessions: [
+    { label: "Why PDPA\n+ DNC", href: "courses/a1-why-pdpa-dnc.html", color: "#34D399",
+      concepts: [ { label: "The PDPC", href: "courses/a1-why-pdpa-dnc.html" }, { label: "Cost of getting it wrong", href: "courses/a1-why-pdpa-dnc.html" } ] },
+    { label: "Ten\nobligations", href: "courses/a2-pdpa-obligations.html", color: "#34D399",
+      concepts: [ { label: "Consent + purpose", href: "courses/a2-pdpa-obligations.html" }, { label: "Protection + breach", href: "courses/a2-pdpa-obligations.html" }, { label: "Accountability", href: "courses/a2-pdpa-obligations.html" } ] },
+    { label: "The DNC\nlayer", href: "courses/a3-dnc-layer.html", color: "#FBBF24",
+      concepts: [ { label: "3 registers", href: "courses/a3-dnc-layer.html" }, { label: "Specified message", href: "courses/a3-dnc-layer.html" }, { label: "Check before send", href: "courses/a3-dnc-layer.html" } ] },
+    { label: "Consent vs\nDNC", href: "courses/a4-consent-exemptions.html", color: "#FBBF24",
+      concepts: [ { label: "Consent override", href: "courses/a4-consent-exemptions.html" }, { label: "Exemptions", href: "courses/a4-consent-exemptions.html" } ] },
+    { label: "Breach +\nenforcement", href: "courses/a5-breach-enforcement.html", color: "#FB923C",
+      concepts: [ { label: "Notification clock", href: "courses/a5-breach-enforcement.html" }, { label: "Penalty caps", href: "courses/a5-breach-enforcement.html" }, { label: "Real cases", href: "courses/a5-breach-enforcement.html" } ] },
+    { label: "Governance", href: "courses/a6-governance.html", color: "#FB923C",
+      concepts: [ { label: "The DPO", href: "courses/a6-governance.html" }, { label: "Accountability", href: "courses/a6-governance.html" }, { label: "The DPMP", href: "courses/a6-governance.html" } ] },
+    { label: "The DNC\ncheck", href: "courses/b1-dnc-check.html", color: "#34D399",
+      concepts: [ { label: "21-day validity", href: "courses/b1-dnc-check.html" }, { label: "The checker", href: "courses/b1-dnc-check.html" } ] },
+    { label: "Capturing\nconsent", href: "courses/b2-consent.html", color: "#34D399",
+      concepts: [ { label: "Positive action", href: "courses/b2-consent.html" }, { label: "Deemed consent", href: "courses/b2-consent.html" }, { label: "Withdrawal", href: "courses/b2-consent.html" } ] },
+    { label: "Compliant\ncampaign", href: "courses/b3-compliant-campaign.html", color: "#FBBF24",
+      concepts: [ { label: "Scope the message", href: "courses/b3-compliant-campaign.html" }, { label: "Keep records", href: "courses/b3-compliant-campaign.html" } ] },
+    { label: "Message-ID\n+ calling", href: "courses/b4-message-id-rules.html", color: "#FBBF24",
+      concepts: [ { label: "Sender ID (s.44)", href: "courses/b4-message-id-rules.html" }, { label: "Calling line (s.45)", href: "courses/b4-message-id-rules.html" } ] },
+    { label: "Exemptions\nin practice", href: "courses/b5-exemptions-practice.html", color: "#FB923C",
+      concepts: [ { label: "Transactional + B2B", href: "courses/b5-exemptions-practice.html" }, { label: "Ongoing relationship", href: "courses/b5-exemptions-practice.html" } ] },
+    { label: "Access +\ncorrection", href: "courses/b6-access-correction.html", color: "#FB923C",
+      concepts: [ { label: "The 30-day rule", href: "courses/b6-access-correction.html" }, { label: "Permitted refusals", href: "courses/b6-access-correction.html" } ] },
+    { label: "Breach\nresponse", href: "courses/b7-breach-response.html", color: "#F87171",
+      concepts: [ { label: "Assess in 30", href: "courses/b7-breach-response.html" }, { label: "Notify PDPC in 3", href: "courses/b7-breach-response.html" }, { label: "500 / significant harm", href: "courses/b7-breach-response.html" } ] },
+    { label: "Compliance\nsystem", href: "courses/b8-compliance-system.html", color: "#F87171",
+      concepts: [ { label: "Data inventory", href: "courses/b8-compliance-system.html" }, { label: "Training + audits", href: "courses/b8-compliance-system.html" }, { label: "DPMP", href: "courses/b8-compliance-system.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
