@@ -137,6 +137,28 @@
         <div class="callout example">
           <span class="ex-pill">Real world</span>
           <p><strong>Marina Retail's near-miss.</strong> Marina's team pulled a list they had checked six weeks earlier for a "quick reminder blast". Six weeks is well past 21 days - the check had lapsed, and several numbers had been added to the register in between. Re-checking first turned a potential breach into a routine send. The habit is not "check once" - it is "check within 21 days, every time".</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A gauge showing Marina Retail's register check was 42 days old against the 21 day validity limit, more than double the permitted freshness window before sending a marketing message.">
+    <style>
+      .b1gzT { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+      .b1gzL { font: 700 16px Inter, sans-serif; fill: #FFFFFF; }
+      .b1gzTk { font: 700 11px Inter, sans-serif; fill: #431407; }
+      .b1gzN { font: 400 12px Inter, sans-serif; fill: #64748B; }
+    </style>
+    <rect x="0" y="0" width="880" height="220" fill="#FFFFFF"/>
+    <text class="b1gzT" x="40" y="28">Marina's check was six weeks old - three past the limit</text>
+
+    <rect x="120" y="110" width="640" height="26" rx="13" fill="#E2E8F0"/>
+    <rect x="120" y="110" width="597" height="26" rx="13" fill="#991B1B"/>
+    <line x1="418.7" y1="92" x2="418.7" y2="152" stroke="#D97706" stroke-width="2.5"/>
+    <text class="b1gzTk" x="418.7" y="84" text-anchor="middle">21-DAY LIMIT</text>
+    <text class="b1gzL" x="580" y="128" text-anchor="middle">42 days</text>
+
+    <text class="b1gzN" x="40" y="196">The habit is not check once - it is check within 21 days, every time.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - six weeks is not close to 21 days, it is double</figcaption>
+</figure>
+
         </div>
       </div>
     </details>
@@ -153,6 +175,52 @@
       <summary><span class="mode live">Live</span>★ Build-along: screen a campaign<span class="mini">6 min</span><span class="caret">▶</span></summary>
       <div class="body">
         <p>Click the presets in order. Watch "delivery receipt" come back <em>out of scope</em> (not a marketing message at all), "cold call, no check" fail on <strong>s.43</strong>, and "promo to a listed number, no consent" fail because the number is listed and you have no consent. Then change the dropdowns to match a real Marina Retail send and see the ruling.</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A decision tree asking whether a message is a specified message under the DNC rules. Transactional and service messages, B2B messages, emergencies, market research, and messages within an ongoing relationship are all out of scope. Anything advertising, promoting or offering goods, services or a business opportunity is in scope, and the register check or consent duty applies before sending.">
+    <defs>
+      <marker id="arrB1sm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+      </marker>
+    </defs>
+    <style>
+      .b1smT { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+      .b1smQ { font: 700 12px Inter, sans-serif; fill: #1E293B; }
+      .b1smE { font: 400 11px Inter, sans-serif; fill: #64748B; }
+      .b1smO { font: 700 12px Inter, sans-serif; fill: #0F766E; }
+      .b1smOr { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+      .b1smL { font: 400 11.5px Inter, sans-serif; fill: #1E293B; }
+      .b1smN { font: 400 12px Inter, sans-serif; fill: #64748B; }
+    </style>
+    <rect x="0" y="0" width="880" height="380" fill="#FFFFFF"/>
+    <text class="b1smT" x="40" y="28">Is this even a specified message? Five ways out, one way in</text>
+
+    <rect x="40" y="142" width="240" height="56" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.5"/>
+    <text class="b1smQ" x="160" y="163" text-anchor="middle">Is this a specified</text>
+    <text class="b1smQ" x="160" y="181" text-anchor="middle">message - marketing?</text>
+
+    <path d="M280,170 L620,140" fill="none" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrB1sm)"/>
+    <text class="b1smE" x="450" y="146" text-anchor="middle">excluded</text>
+    <path d="M280,170 L620,295" fill="none" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrB1sm)"/>
+    <text class="b1smE" x="450" y="235" text-anchor="middle">marketing</text>
+
+    <rect x="620" y="50" width="220" height="180" rx="10" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.5"/>
+    <text class="b1smO" x="632" y="72">OUT OF SCOPE</text>
+    <text class="b1smL" x="632" y="90">Transactional / service msgs</text>
+    <text class="b1smL" x="632" y="108">B2B - to another business</text>
+    <text class="b1smL" x="632" y="126">Emergencies</text>
+    <text class="b1smL" x="632" y="144">Market research</text>
+    <text class="b1smL" x="632" y="162">Ongoing relationship</text>
+
+    <rect x="620" y="250" width="220" height="90" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.5"/>
+    <text class="b1smOr" x="632" y="272">DNC APPLIES</text>
+    <text class="b1smL" x="632" y="288">Check the register or hold</text>
+    <text class="b1smL" x="632" y="304">consent before you send</text>
+
+    <text class="b1smN" x="40" y="366">Is this a specified message is always the first question - marketing, or excluded.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - five exclusions cover more real sends than people expect</figcaption>
+</figure>
+
         <div class="dncbox" data-caption="Presets first, then build your own. The ruling cites the exact PDPA provision - s.43 (check), s.44 (sender ID), s.45 (calling line), or the Eighth-Schedule exclusions."></div>
         <div class="callout tip">
           <strong>Honesty note - what this checker really is</strong>
